@@ -1,5 +1,6 @@
 import React from 'react'
 import Food from './Food'
+import Meal from './Meal'
 import { Route } from 'react-router-dom'
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
         path='/food/:name'
         render={routeProps => <Food authenticated={true} {...routeProps} />}
       />
+      <Route exact path='/food/:foodName/drink/:drinkName' component={Meal} />
     </div>
   )
 }
