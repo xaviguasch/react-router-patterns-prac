@@ -1,6 +1,7 @@
 import React from 'react'
 import Food from './Food'
 import Meal from './Meal'
+import FoodSearch from './FoodSearch'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
 
@@ -15,7 +16,7 @@ function App() {
           render={routeProps => <Food authenticated={true} {...routeProps} />}
         />
         <Route exact path='/food/:foodName/drink/:drinkName' component={Meal} />
-        <Route exact path='/' render={() => <h1>Home page</h1>} />
+        <Route exact path='/' render={() => <FoodSearch />} />
         <Route render={() => <h1>ERROR NOT FOUND</h1>} />
       </Switch>
     </div>
